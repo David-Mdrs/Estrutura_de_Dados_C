@@ -47,12 +47,12 @@ void imprimir(LISTA *lst) {        // Imprimindo elementos da Lista.
     for (int i = 0; i < atual->qntNotas; i++) { // Percorrendo as notas.
       printf(" %d", atual->notas[i]);           // Printando notas.
     }
-    printf("\nMÉDIA: %.2f\n\n", atual->media);  // Printando média.
+    printf("\nMEDIA: %.2f\n\n", atual->media);  // Printando média.
     atual = atual->proximo;                     // Buscando próximo Nó.
   }
 }
-void novoAluno(LISTA *lst){
-  printf("=============== INSERINDO NOVO ALUNO À LISTA. ===============\n\n");
+void novoAluno(LISTA *lst){        // Inserindo aluno de forma ordenada com base em sua média de notas.
+  printf("=============== INSERINDO NOVO ALUNO A LISTA. ===============\n\n");
   NO *novoNO = (NO*)malloc(sizeof(NO));         // Alocando espaço para o novo Nó da Lista.
   char stringTemporaria[70];                    // Iniciando string temporária.
   int listaNotasTemp[70];                       // Iniciando lista de notas temporária.
@@ -85,7 +85,7 @@ void novoAluno(LISTA *lst){
   novoNO->media = (float)media/(float)contador;      // Passando valor da média para Nó.
   novoNO->qntNotas = contador;
   
-  printf("\nNome, notas e média do aluno inseridas com sucesso!\n\n");
+  printf("\nNome, notas e media do aluno inseridas com sucesso!\n\n");
   
   // =============================== NÓS ===============================  
 
@@ -117,7 +117,7 @@ void obter(struct NO *no){                    // Retornando os dados do Nó a pa
     for (int i = 0; i < no->qntNotas; i++) {  // Percorrendo as notas.
       printf(" %d", no->notas[i]);            // Printando notas.
     }
-    printf("\nMÉDIA: %.2f\n\n", no->media);   // Printando média.
+    printf("\nMEDIA: %.2f\n\n", no->media);   // Printando média.
   }
 }
 int tamanho(LISTA *lst){            // Retornando o tamanho da Lista.
