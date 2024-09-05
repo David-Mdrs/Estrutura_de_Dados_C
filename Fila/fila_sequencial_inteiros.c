@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 typedef struct FILA{
-  unsigned MAX;
+  int MAX;
   int *fila;
   int posicao;
 } FILA;
 
-void criar(FILA *fila, unsigned MAX){
+void criar(FILA *fila, int MAX){
   fila->MAX = MAX;
   fila->posicao = 0;
   fila->fila = malloc(MAX * sizeof(int));
