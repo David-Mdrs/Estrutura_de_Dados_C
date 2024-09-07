@@ -5,64 +5,20 @@
 typedef struct PILHA {
   int posicao;
   int MAX;
-  char *nome;
+  char *string;
 } PILHA;
 
 // ============================== CABEÇALHO ==============================
 
 void criar(PILHA *pilha);    // Inicializa memória e dados dos campos da Pilha
 void apagar(PILHA *pilha);   // Apaga registro do tipo Pilha desalocando memória
-void imprimir(PILHA *pilha); // Imprime o campo "nome" da Pilha
-int tamanho(PILHA *pilha);   // Retorna o tamanho do "nome" da Pilha
-void push(PILHA *pilha, char dado); // Insere um elemento "char" na Pilha
-int pop(PILHA *pilha);       // Remove um elemento da Pilha
+void imprimir(PILHA *pilha); // Imprime o campo "string" da Pilha
+int tamanho(PILHA *pilha);   // Retorna o tamanho do "string" da Pilha
+void push(PILHA *pilha, char dado);
+int pop(PILHA *pilha);
 
-void parenteses(char nome[100]);
-
-int main(){
-
-  parenteses("([[)(]][]{})");  
-  
-  return 0;
-}
-
-// ============================== CABEÇALHO ==============================
-
-void criar(PILHA *pilha){
-  pilha->MAX = 100;
-  pilha->nome = (char*)malloc(pilha->MAX * sizeof(char));
-  pilha->posicao = 0;
-}
-void apagar(PILHA *pilha){
-  free(pilha->nome);
-  pilha->posicao = 0;
-}
-void imprimir(PILHA *pilha){
-  for(int i = 0; i < pilha->posicao; i++){
-    printf("%c", pilha->nome[i]);
-  } printf("\n");
-}
-int tamanho(PILHA *pilha){
-  return pilha->posicao;
-}
-void push(PILHA *pilha, char dado){
-  if(pilha->posicao >= pilha->MAX){
-    printf("Pilha cheia!\n");
-  } else {
-    pilha->nome[pilha->posicao] = dado;
-    pilha->posicao++;
-  }
-}
-int pop(PILHA *pilha){
-  if(pilha->posicao == 0){
-    printf("Pilha vazia!\n");
-    return -1;
-  } else {
-    return pilha->nome[--(pilha->posicao)];
-  }
-}
-void parenteses(char nome[100]){
-  int tamanho = strlen(nome);
+void parenteses(char string[100]){
+  int tamanho = strlen(string);
 
   if (tamanho <= 0){                    // Testa string vazia
     printf("String vazia!\n");
@@ -76,9 +32,9 @@ void parenteses(char nome[100]){
 
     for(int i = 0; i < tamanho; i++){ 
 
-      if(nome[i] == '('){
+      if(string[i] == '('){
         push(&Parenteses, '(');
-      } else if(nome[i] == ')'){
+      } else if(string[i] == ')'){
         if(Parenteses.posicao == 0){
           push(&Parenteses, ')');
           break;
@@ -86,9 +42,9 @@ void parenteses(char nome[100]){
           pop(&Parenteses);
         }
 
-      } else if(nome[i] == '['){
+      } else if(string[i] == '['){
         push(&Colchetes, '[');
-      } else if(nome[i] == ']'){
+      } else if(string[i] == ']'){
         if(Colchetes.posicao == 0){
           push(&Colchetes, ']');
           break;
@@ -96,9 +52,9 @@ void parenteses(char nome[100]){
           pop(&Colchetes);
         }
 
-      } else if(nome[i] == '{'){
+      } else if(string[i] == '{'){
         push(&Chaves, '{');
-      } else if(nome[i] == '}'){
+      } else if(string[i] == '}'){
         if(Chaves.posicao == 0){
           push(&Chaves, '{');
           break;
@@ -106,7 +62,7 @@ void parenteses(char nome[100]){
           pop(&Chaves);
         }
 
-      } else {
+      } else if(strchr("0123456789*/+-", string[i]) == 0){
         printf("Elemento desconhecido na string!\n");
         return;
       }
@@ -117,5 +73,57 @@ void parenteses(char nome[100]){
     } else {
       printf("Balanceada!\n");
     }
+  }
+}
+
+int main(){
+  // Testes que devem dar "OK"
+  parenteses("(2+3)-(9/9)");  
+  parenteses("((2+3)-(9/9))");  
+  parenteses("((2+3)-(9/9))");  
+
+  // Testes que devem dar "Nâo OK"
+  parenteses(")2+3(-(9/9)");  
+  parenteses("(2+3-(9/9)");  
+
+  // Teste que deve dar "Elemento desconhecido na string!"
+  parenteses("(a+b)");  
+  
+  return 0;
+}
+
+// ============================== CABEÇALHO ==============================
+
+void criar(PILHA *pilha){
+  pilha->MAX = 100;
+  pilha->string = (char*)malloc(pilha->MAX * sizeof(char));
+  pilha->posicao = 0;
+}
+void apagar(PILHA *pilha){
+  free(pilha->string);
+  pilha->posicao = 0;
+}
+void imprimir(PILHA *pilha){
+  for(int i = 0; i < pilha->posicao; i++){
+    printf("%c", pilha->string[i]);
+  } printf("\n");
+}
+int tamanho(PILHA *pilha){
+  return pilha->posicao;
+}
+void push(PILHA *pilha, char dado){
+  if(pilha->posicao >= pilha->MAX){
+    printf("Pilha cheia!\n");
+  } else {
+    pilha->string[pilha->posicao] = dado;
+    pilha->posicao++;
+  }
+}
+int pop(PILHA *pilha){
+  if(pilha->posicao == 0){
+    printf("Pilha vazia!\n");
+    return -1;
+  } else {
+    return pilha->string[--(pilha->posicao)];
   }
 }
