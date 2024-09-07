@@ -10,7 +10,33 @@ typedef struct FILA{
   struct NO *fim;
 } FILA;
 
-void inicializar(FILA *fila){
+void criar(FILA *fila);     // Inicializa e aloca memória com campos da Fila
+void apagar(FILA *fila);          // Desaloca memória e apaga Fila
+void imprimir(FILA *fila);        // Imprime os elementos da Fila
+int tamanho(FILA *fila);          // Retorna o tamanho da Fila
+void enqueue(FILA *fila, int dado); // Insere elementos no fim da Fila
+int dequeue(FILA *fila);          // Remove primeiro elemento da Fila
+int getFront(FILA *fila);         // Retorna primero elemento da Fila sem removê-lo
+
+
+int main(){
+  FILA fila1;
+  criar(&fila1);
+
+  enqueue(&fila1, 100);
+  enqueue(&fila1, 50);
+  enqueue(&fila1, 200);
+
+  printf("Dequeue em Fila1 -> %d\n",dequeue(&fila1));
+
+  imprimir(&fila1);
+
+  apagar(&fila1);
+
+  return 0;
+}
+
+void criar(FILA *fila){
   fila->inicio = fila->fim = NULL;
 }
 void apagar(FILA *fila){
@@ -41,7 +67,6 @@ int tamanho(FILA *fila){
   }
   return contador;
 }
-
 void enqueue(FILA *fila, int dado){
   NO *novoNO = malloc(sizeof(NO));
   novoNO->proximo = NULL;
@@ -58,7 +83,7 @@ int dequeue(FILA *fila){
   if (fila->inicio) {
     int dado = fila->inicio->dado;
     NO *auxiliar = fila->inicio;
-  
+
     if (fila->inicio == fila->fim){         // Apenas um elemento na Fila
       fila->inicio = fila->fim = NULL;
     } else {                                // Mais de um elemento na Fila
@@ -71,21 +96,10 @@ int dequeue(FILA *fila){
     exit(1);
   }
 }
-
-int main(void) {
-  FILA fila;
-  inicializar(&fila);
-  imprimir(&fila);
-  enqueue(&fila, 1);
-  enqueue(&fila, 2);
-  enqueue(&fila, 3);
-  enqueue(&fila, 4);
-  imprimir(&fila);
-  dequeue(&fila);
-  dequeue(&fila);
-  dequeue(&fila);
-
-  imprimir(&fila);
-
-  return 0;
+int getFront(FILA *fila){
+  if(!fila->fim){
+    printf("Fila vazia!\n");
+    exit(1);
+  }
+  return fila->inicio->dado;
 }
