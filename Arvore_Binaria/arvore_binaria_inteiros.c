@@ -21,6 +21,7 @@ NO *mostrarFolhas(NO *no);
 int getMax(NO *no);
 int getMin(NO *no);
 int distanciaRaiz(NO *no, int dado);
+int alturaArvore(NO *no);
 
 int main(){
   int array[10] = {5, 3, 6, 7, 4, 1, 2, 0, 9, 8};
@@ -33,11 +34,13 @@ int main(){
   mostrarFolhas(raiz);
   printf("\n");
 
-  printf("Maior elemento da árvore: %d\n", getMax(raiz));
-  printf("Menor elemento da árvore: %d\n", getMin(raiz));
+  printf("Maior elemento da arvore: %d\n", getMax(raiz));
+  printf("Menor elemento da arvore: %d\n", getMin(raiz));
 
   printf("Distancia do elemento %d da raiz: %d\n", 8, distanciaRaiz(raiz, 8));
   printf("Distancia do elemento %d da raiz: %d\n", 10, distanciaRaiz(raiz, 10));
+
+  printf("A maior distancia da raiz e %d\n", alturaArvore(raiz));
 
   return 0;
 }
@@ -182,4 +185,17 @@ int distanciaRaiz(NO *no, int dado){
     }
   }
   return -1;
+}
+int alturaArvore(NO *no){
+    int tamanho = 0;
+    if(no){
+        if (alturaArvore(no->esquerda) > alturaArvore(no->direita)){
+            tamanho = 1 + alturaArvore(no->esquerda);
+        } else {
+            tamanho = 1 + alturaArvore(no->direita);
+        }
+    } else {
+        return -1;
+    }
+    return tamanho;
 }
