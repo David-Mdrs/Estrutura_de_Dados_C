@@ -22,6 +22,7 @@ int getMax(NO *no);
 int getMin(NO *no);
 int distanciaRaiz(NO *no, int dado);
 int alturaArvore(NO *no);
+int distanciaEntre(NO *no, int dado1, int dado2);
 
 int main(){
   int array[10] = {5, 3, 6, 7, 4, 1, 2, 0, 9, 8};
@@ -41,6 +42,10 @@ int main(){
   printf("Distancia do elemento %d da raiz: %d\n", 10, distanciaRaiz(raiz, 10));
 
   printf("A maior distancia da raiz e %d\n", alturaArvore(raiz));
+
+  printf("A distância entre %d e %d em saltos e: %d\n", 2, 4, distanciaEntre(raiz, 2, 4));
+  printf("A distância entre %d e %d em saltos e: %d\n", 5, 6, distanciaEntre(raiz, 5, 6));
+  printf("A distância entre %d e %d em saltos e: %d\n", 2, 4, distanciaEntre(raiz, 0, 8));
 
   return 0;
 }
@@ -198,4 +203,16 @@ int alturaArvore(NO *no){
         return -1;
     }
     return tamanho;
+}
+int distanciaEntre(NO *no, int dado1, int dado2){
+    while(1){
+        if(dado1 < no->dado && dado2 < no->dado){       // Ambos estão na esquerda
+            no = no->esquerda;
+        } else if (dado1 > no->dado && dado2 > no->dado){    // Ambos estão na direita
+            no = no->direita;
+        } else {                    // Direções divergem (raiz que liga os dados)
+            break;
+        }
+    }
+    return distanciaRaiz(no, dado1) + distanciaRaiz(no, dado2);
 }
