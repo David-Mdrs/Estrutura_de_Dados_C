@@ -10,7 +10,7 @@ Além disso, durante a disciplina, tive meus primeiros contatos com comandos `Gi
 
 Por fim, continuarei a organizar e melhorar a `legibilidade e a clareza dos códigos` neste repositório, atualizando cada arquivo com informações importantes e necessárias para o seu entendimento. 📝
 
-Abaixo está o link para acessar algumas estruturas: 🔗
+Você pode acessar algumas das estruturas através dos links abaixo: 🔗
 
 **[Lista Linear Sequencial](https://github.com/David-Mdrs/Estrutura_de_Dados_C/tree/main/Lista_Linear_Sequencial)**. ➡️
 
