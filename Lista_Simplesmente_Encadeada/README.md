@@ -27,7 +27,7 @@ Para esta aplicação, foram utilizadas diversas funções `básicas e específi
 ## Conteúdos Relacionados 🗂️
 
 Além disso, se desejarem explorar outros tipos de estruturas relacionadas, podem acessar os seguintes links: <br>
-**[Lista Linear Sequencial](https://github.com/David-Mdrs/Estrutura_de_Dados_C/tree/main/Lista_Linear_Sequencial)** <br>
-**[Lista Duplamente Encadeada](https://github.com/David-Mdrs/Estrutura_de_Dados_C/tree/main/Lista_Duplamente_Encadeada)**. 🔗
+**[Lista Linear Sequencial](https://github.com/David-Mdrs/Estrutura_de_Dados_C/tree/main/Lista_Linear_Sequencial)** ➡️ <br>
+**[Lista Duplamente Encadeada](https://github.com/David-Mdrs/Estrutura_de_Dados_C/tree/main/Lista_Duplamente_Encadeada)** ⛓️
 
 ### Espero que tenham gostado! 😆

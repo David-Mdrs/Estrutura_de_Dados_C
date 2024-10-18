@@ -12,8 +12,8 @@ Por fim, continuarei a organizar e melhorar a `legibilidade e a clareza dos cód
 
 Você pode acessar algumas das estruturas através dos links abaixo: 🔗
 
-**[Lista Linear Sequencial](https://github.com/David-Mdrs/Estrutura_de_Dados_C/tree/main/Lista_Linear_Sequencial)**. ➡️ <br>
-**[Lista Simplesmente Encadeada](https://github.com/David-Mdrs/Estrutura_de_Dados_C/tree/main/Lista_Simplesmente_Encadeada)**. 🔗
+**[Lista Linear Sequencial](https://github.com/David-Mdrs/Estrutura_de_Dados_C/tree/main/Lista_Linear_Sequencial)** ➡️ <br>
+**[Lista Simplesmente Encadeada](https://github.com/David-Mdrs/Estrutura_de_Dados_C/tree/main/Lista_Simplesmente_Encadeada)** 🔗
 
 ## 🛠️ Contribuições
 
