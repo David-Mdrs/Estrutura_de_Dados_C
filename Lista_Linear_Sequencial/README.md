@@ -6,7 +6,7 @@ A `Lista Linear Sequencial` é uma estrutura que armazena uma coleção de eleme
 
 ## Funções 🛠️
 
-Para esta aplicação, foram utilizadas diversas funções `básicas e específicas` para manipulação da `Lista Linear Sequencial`. Ademais, quero ressaltar a importância da `função Redimensionar`, pois proporcionou uma compreensão fundamental sobre como funciona a alocação dinâmica de memória, sempre com o objetivo de `economizar recursos`. Essa função destaca a flexibilidade e eficiência da estrutura, permitindo que a lista se adapte às necessidades do programa. 📈
+Para esta aplicação, foram utilizadas diversas funções `básicas e específicas` para manipulação da `Lista Linear Sequencial`. Ademais, quero ressaltar a importância da função `Redimensionar`, pois proporcionou uma compreensão fundamental sobre como funciona a alocação dinâmica de memória, sempre com o objetivo de `economizar recursos`. Essa função destaca a flexibilidade e eficiência da estrutura, permitindo que a lista se adapte às necessidades do programa. 📈
 
 
 <details>
@@ -31,6 +31,6 @@ Para esta aplicação, foram utilizadas diversas funções `básicas e específi
  
 ## Conteúdos Relacionados 🗂️
 
-Além disso, se desejarem explorar outros tipos de estruturas relacionadas, podem acessar os seguintes links: **[Listas Simplesmente Encadeada](https://github.com/David-Mdrs/Estrutura_de_Dados_C/tree/main/Lista_Simplesmente_Encadeada)** e **[Listas Duplamente Encadeada](https://github.com/David-Mdrs/Estrutura_de_Dados_C/tree/main/Lista_Duplamente_Encadeada)**. 🔗
+Além disso, se desejarem explorar outros tipos de estruturas relacionadas, podem acessar os seguintes links: **[Lista Simplesmente Encadeada](https://github.com/David-Mdrs/Estrutura_de_Dados_C/tree/main/Lista_Simplesmente_Encadeada)** e **[Lista Duplamente Encadeada](https://github.com/David-Mdrs/Estrutura_de_Dados_C/tree/main/Lista_Duplamente_Encadeada)**. 🔗
 
 ### Espero que gostem e aproveitem! 🤓
