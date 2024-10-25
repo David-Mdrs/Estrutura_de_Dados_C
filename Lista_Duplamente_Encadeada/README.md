@@ -19,6 +19,17 @@ Utilizando apenas a função principal `InserirFun`, após determinar o tipo de 
 
 </details>
 
+Além disso, para utilizar um exemplo com `strings` de `Lista Linear Duplamente Encadeada`, foi elaborada uma aplicação que cadastra diferentes `nomes` e suas `frequências`. Desta forma, ao inserir nomes já existentes, apenas a sua frequência é incrementada.
+
+<details>
+<summary>Algoritmo do programa</summary>
+
+### Função NovaPessoa
+
+Para este programa, foi adicionada apenas uma função principal chamada `NovaPessoa`. Nesta função, verifica-se inicialmente se já existe algum nome igual ao que está sendo inserido, utilizando um while que percorre e compara o dado a ser inserido com o nome de cada nó. `Caso não exista`, o nome é inserido no final da lista; `caso exista`, apenas o valor da frequência é incrementado. 👥
+
+</details>
+
 ## Funções 🛠️
 
 Para esta aplicação, foram utilizadas algumas funções `básicas e específicas` para manipulação da `Lista Linear Duplamente Encadeada`.
