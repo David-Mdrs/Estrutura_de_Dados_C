@@ -1,9 +1,9 @@
 # ▶️ Fila Sequencial
 
-Após o término de `Listas`, daremos continuidade ao assunto de `Filas Sequenciais`. ➡️
+Após o término de `Listas`, vamos dar continuidade ao assunto de `Filas Sequenciais`. ➡️
 
-A `Fila Sequencial` é uma estrutura que armazena uma coleção de elementos em uma sequência linear. Desta forma, cada elemento é armazenado em `sequência na memória`, permitindo acesso rápido aos dados por meio de índices. 🚀
-A `política de acesso` aos dados da fila segue o princípio `FIFO - First In, First Out`, em que o primeiro elemento inserido será também o primeiro a ser removido. Isso é semelhante a uma fila em um estabelecimento, onde quem chega primeiro é atendido e sai antes dos próximos. 📥📤
+A `Fila Sequencial` é uma estrutura que armazena uma coleção de elementos em uma sequência linear. Desta forma, cada elemento é armazenado em `sequência na memória`, permitindo acesso rápido aos dados por meio de índices. 🚀 <br>
+A `política de acesso` aos dados da fila segue o princípio `FIFO - First In, First Out`, em que o `primeiro elemento inserido` será também o `primeiro a ser removido`. Isso é semelhante a uma fila em um estabelecimento, onde quem chega primeiro é atendido e sai antes dos próximos. 📥📤
 
 ## Funções 🛠️
 
