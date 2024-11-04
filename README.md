@@ -14,8 +14,8 @@ Você pode acessar algumas das estruturas através dos links abaixo: 🔗
 
 **[Lista Linear Sequencial](https://github.com/David-Mdrs/Estrutura_de_Dados_C/tree/main/Lista_Linear_Sequencial)** ➡️ <br>
 **[Lista Simplesmente Encadeada](https://github.com/David-Mdrs/Estrutura_de_Dados_C/tree/main/Lista_Simplesmente_Encadeada)** 🔗 <br>
-**[Lista Duplamente Encadeada](https://github.com/David-Mdrs/Estrutura_de_Dados_C/tree/main/Lista_Duplamente_Encadeada)** ⛓️
-**[Fila Sequencial](https://github.com/David-Mdrs/Estrutura_de_Dados_C/tree/main/Fila_Sequencial)** ⛓️
+**[Lista Duplamente Encadeada](https://github.com/David-Mdrs/Estrutura_de_Dados_C/tree/main/Lista_Duplamente_Encadeada)** ⛓️ <br>
+**[Fila Sequencial](https://github.com/David-Mdrs/Estrutura_de_Dados_C/tree/main/Fila_Sequencial)** ▶️
 
 ## 🛠️ Contribuições
 
